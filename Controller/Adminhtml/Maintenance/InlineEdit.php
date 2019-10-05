@@ -55,7 +55,7 @@ class InlineEdit extends \Magento\Backend\App\Action
             } else {
                 foreach (array_keys($postItems) as $modelId) {
                     /** @var \Xigen\MaintenancePage\Model\Maintenance $model */
-                    $model = $$this->maintenanceFactory->create()->load($modelId);
+                    $model = $this->maintenanceFactory->create()->load($modelId);
                     try {
                         $model->setData($postItems[$modelId] + $model->getData());
                         $model->save();
