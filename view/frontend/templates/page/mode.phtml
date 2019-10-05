@@ -1,0 +1,9 @@
+<?php $page = $block->getMaintenacePage(); ?>
+<?php if ($page->getCss()) : ?>
+<style>
+    <?= $page->getCss(); ?>
+</style>
+<?php endif; ?>
+<?php if ($page->getContent()) : ?>
+    <?= $page->getContent(); ?>
+<?php endif; ?>
