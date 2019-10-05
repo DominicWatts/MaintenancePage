@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="Xigen_MaintenancePage::MaintenancePage" module="Xigen_MaintenancePage" resource="Magento_Backend::content" sortOrder="50" title="Maintenance Page" parent="Magento_Backend::content" />
+		<add action="xigen_maintenancepage/maintenance/index" id="Xigen_MaintenancePage::xigen_maintenancepage_maintenance" module="Xigen_MaintenancePage" parent="Xigen_MaintenancePage::MaintenancePage" resource="Magento_Backend::content" sortOrder="10" title="Manage"/>
+	</menu>
+</config>

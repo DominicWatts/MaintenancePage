@@ -7,4 +7,4 @@ finder:
     - storage
     - vendor
   name: "*.php"
-not-name: "*.blade.php"
+  not-name: "*.blade.php"

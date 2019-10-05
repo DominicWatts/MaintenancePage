@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<page layout="empty" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<head>
+		<meta name="robots" content="NOINDEX,NOFOLLOW"/>
+		<remove src="mage/calendar.css"/>
+		<remove src="requirejs/require.js"/>
+		<remove src="css/styles-l.css"/>
+		<remove src="css/styles-m.css"/>
+        <remove src="css/styles-s.css"/>
+		<remove src="css/print.css"/>
+        <remove src="requirejs/require.js"/>
+        <remove src="mage/requirejs/mixins.js"/>
+        <remove src="requirejs-config.js"/>
+		<remove src="mage/polyfill.js"/>
+	</head>
+	<body>
+		<referenceContainer name="page.wrapper" remove="true"/>
+        <referenceBlock name="translate" remove="true"/>
+        <referenceBlock name="requirejs-config" remove="true"/>
+        <referenceContainer name="root">
+            <block class="Xigen\MaintenancePage\Block\Page\Mode" name="page.mode" template="Xigen_MaintenancePage::page/mode.phtml"/>
+        </referenceContainer>
+	</body>
+</page>
