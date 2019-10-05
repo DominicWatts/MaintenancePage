@@ -1,4 +1,10 @@
-<?php $page = $block->getMaintenacePage(); ?>
+<?php
+/**
+ * @author Dominic <dominic@xigen.co.uk>
+ */
+// phpcs:disable
+$page = $block->getMaintenacePage();
+?>
 <?php if ($page->getCss()) : ?>
 <style>
     <?= $page->getCss(); ?>

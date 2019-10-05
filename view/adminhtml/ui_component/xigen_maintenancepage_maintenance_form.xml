@@ -1,46 +1,46 @@
 <?xml version="1.0" ?>
 <form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
-	<argument name="data" xsi:type="array">
-		<item name="js_config" xsi:type="array">
-			<item name="provider" xsi:type="string">xigen_maintenancepage_maintenance_form.maintenance_form_data_source</item>
-		</item>
-		<item name="label" translate="true" xsi:type="string">General Information</item>
-		<item name="template" xsi:type="string">templates/form/collapsible</item>
-	</argument>
-	<settings>
-		<buttons>
-			<button class="Xigen\MaintenancePage\Block\Adminhtml\Maintenance\Edit\BackButton" name="back"/>
-			<button class="Xigen\MaintenancePage\Block\Adminhtml\Maintenance\Edit\DeleteButton" name="delete"/>
-			<button class="Xigen\MaintenancePage\Block\Adminhtml\Maintenance\Edit\SaveButton" name="save"/>
-			<button class="Xigen\MaintenancePage\Block\Adminhtml\Maintenance\Edit\SaveAndContinueButton" name="save_and_continue"/>
-		</buttons>
-		<namespace>xigen_maintenancepage_maintenance_form</namespace>
-		<dataScope>data</dataScope>
-		<deps>
-			<dep>xigen_maintenancepage_maintenance_form.maintenance_form_data_source</dep>
-		</deps>
-	</settings>
-	<dataSource name="maintenance_form_data_source">
-		<argument name="data" xsi:type="array">
-			<item name="js_config" xsi:type="array">
-				<item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
-			</item>
-		</argument>
-		<settings>
-			<submitUrl path="*/*/save"/>
-		</settings>
-		<dataProvider class="Xigen\MaintenancePage\Model\Maintenance\DataProvider" name="maintenance_form_data_source">
-			<settings>
-				<requestFieldName>maintenance_id</requestFieldName>
-				<primaryFieldName>maintenance_id</primaryFieldName>
-			</settings>
-		</dataProvider>
-	</dataSource>
-	<fieldset name="general">
-		<settings>
-			<label/>
-		</settings>
-		<field formElement="input" name="name" sortOrder="10">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">xigen_maintenancepage_maintenance_form.maintenance_form_data_source</item>
+        </item>
+        <item name="label" translate="true" xsi:type="string">General Information</item>
+        <item name="template" xsi:type="string">templates/form/collapsible</item>
+    </argument>
+    <settings>
+        <buttons>
+            <button class="Xigen\MaintenancePage\Block\Adminhtml\Maintenance\Edit\BackButton" name="back"/>
+            <button class="Xigen\MaintenancePage\Block\Adminhtml\Maintenance\Edit\DeleteButton" name="delete"/>
+            <button class="Xigen\MaintenancePage\Block\Adminhtml\Maintenance\Edit\SaveButton" name="save"/>
+            <button class="Xigen\MaintenancePage\Block\Adminhtml\Maintenance\Edit\SaveAndContinueButton" name="save_and_continue"/>
+        </buttons>
+        <namespace>xigen_maintenancepage_maintenance_form</namespace>
+        <dataScope>data</dataScope>
+        <deps>
+            <dep>xigen_maintenancepage_maintenance_form.maintenance_form_data_source</dep>
+        </deps>
+    </settings>
+    <dataSource name="maintenance_form_data_source">
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+            </item>
+        </argument>
+        <settings>
+            <submitUrl path="*/*/save"/>
+        </settings>
+        <dataProvider class="Xigen\MaintenancePage\Model\Maintenance\DataProvider" name="maintenance_form_data_source">
+            <settings>
+                <requestFieldName>maintenance_id</requestFieldName>
+                <primaryFieldName>maintenance_id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <fieldset name="general">
+        <settings>
+            <label/>
+        </settings>
+        <field formElement="input" name="name" sortOrder="10">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="source" xsi:type="string">Testimonial</item>
@@ -55,22 +55,22 @@
                 </validation>
             </settings>
         </field>
-		<field formElement="textarea" name="css" sortOrder="20">
-			<argument name="data" xsi:type="array">
-				<item name="config" xsi:type="array">
-					<item name="source" xsi:type="string">Maintenance</item>
-				</item>
-			</argument>
-			<settings>
-				<dataType>text</dataType>
-				<label translate="true">CSS</label>
-				<dataScope>css</dataScope>
-				<validation>
-					<rule name="required-entry" xsi:type="boolean">false</rule>
-				</validation>
-			</settings>
-		</field>
-		<field name="content" formElement="wysiwyg" sortOrder="30">
+        <field formElement="textarea" name="css" sortOrder="20">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">Maintenance</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">CSS</label>
+                <dataScope>css</dataScope>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">false</rule>
+                </validation>
+            </settings>
+        </field>
+        <field name="content" formElement="wysiwyg" sortOrder="30">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="source" xsi:type="string">block</item>
@@ -94,5 +94,5 @@
                 </wysiwyg>
             </formElements>
         </field>
-	</fieldset>
+    </fieldset>
 </form>
