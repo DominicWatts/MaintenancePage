@@ -16,4 +16,11 @@
             </argument>
         </arguments>
     </type>
+    <type name="Magento\Framework\Console\CommandList">
+		<arguments>
+			<argument name="commands" xsi:type="array">
+				<item name="Maintenance" xsi:type="object">Xigen\MaintenancePage\Console\Command\Maintenance</item>
+			</argument>
+		</arguments>
+	</type>
 </config>
