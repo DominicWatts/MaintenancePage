@@ -26,6 +26,20 @@ Configure maintanance page to show or hide with these configurations
 Warning: Will add load to site as plugin will intercept every page request - I've made this as lightweight as possible but this is designed for development, coming soon page or as emergency measure
 ```
 
+# Console command to toggle maintenance page
+
+`xigen:maintenancepage:toggle [-s|--store STORE] [--] <toggle>`
+
+## Examples
+
+`php bin/magento xigen:maintenancepage:toggle enable`
+
+`php bin/magento xigen:maintenancepage:toggle disable`
+
+`php bin/magento xigen:maintenancepage:toggle enable -s 1`
+
+`php bin/magento xigen:maintenancepage:toggle disable -s 1`
+
 # Example
 
 https://bootsnipp.com/shashibeit
