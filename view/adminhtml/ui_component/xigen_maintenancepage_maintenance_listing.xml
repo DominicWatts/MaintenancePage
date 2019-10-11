@@ -18,23 +18,20 @@
             <dep>xigen_maintenancepage_maintenance_listing.xigen_maintenancepage_maintenance_listing_data_source</dep>
         </deps>
     </settings>
-    <dataSource name="xigen_maintenancepage_maintenance_listing_data_source">
+    <dataSource name="xigen_maintenancepage_maintenance_listing_data_source" component="Magento_Ui/js/grid/provider">
+        <settings>
+            <storageConfig>
+                <param name="cacheRequests" xsi:type="boolean">false</param>
+            </storageConfig>
+            <updateUrl path="mui/index/render"/>
+        </settings>
         <aclResource>Xigen_MaintenancePage::Maintenance</aclResource>
-        <argument name="dataProvider" xsi:type="configurableObject">
-            <argument name="class" xsi:type="string">Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider</argument>
-            <argument name="name" xsi:type="string">xigen_maintenancepage_maintenance_listing_data_source</argument>
-            <argument name="primaryFieldName" xsi:type="string">maintenance_id</argument>
-            <argument name="requestFieldName" xsi:type="string">id</argument>
-            <argument name="data" xsi:type="array">
-                <item name="config" xsi:type="array">
-                    <item name="component" xsi:type="string">Magento_Ui/js/grid/provider</item>
-                    <item name="update_url" path="mui/index/render" xsi:type="url"/>
-                    <item name="storageConfig" xsi:type="array">
-                        <item name="indexField" xsi:type="string">maintenance_id</item>
-                    </item>
-                </item>
-            </argument>
-        </argument>
+        <dataProvider class="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider" name="xigen_maintenancepage_maintenance_listing_data_source">
+            <settings>
+                <requestFieldName>id</requestFieldName>
+                <primaryFieldName>maintenance_id</primaryFieldName>
+            </settings>
+        </dataProvider>
     </dataSource>
     <listingToolbar name="listing_top">
         <settings>
