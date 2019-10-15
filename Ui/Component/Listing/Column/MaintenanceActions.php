@@ -46,6 +46,7 @@ class MaintenanceActions extends \Magento\Ui\Component\Listing\Columns\Column
         if (isset($dataSource['data']['items'])) {
             foreach ($dataSource['data']['items'] as & $item) {
                 if (isset($item['maintenance_id'])) {
+                    // phpcs:disable
                     $item[$this->getData('name')] = [
                         'edit' => [
                             'href' => $this->urlBuilder->getUrl(
@@ -70,6 +71,7 @@ class MaintenanceActions extends \Magento\Ui\Component\Listing\Columns\Column
                             ]
                         ]
                     ];
+                    // phpcs:enable
                 }
             }
         }
