@@ -18,6 +18,7 @@ class DeleteButton extends GenericButton implements ButtonProviderInterface
     {
         $data = [];
         if ($this->getModelId()) {
+            // phpcs:disable
             $data = [
                 'label' => __('Delete Maintenance Page'),
                 'class' => 'delete',
@@ -26,6 +27,7 @@ class DeleteButton extends GenericButton implements ButtonProviderInterface
                 ) . '\', \'' . $this->getDeleteUrl() . '\')',
                 'sort_order' => 20,
             ];
+            // phpcs:enable
         }
         return $data;
     }
