@@ -14,9 +14,9 @@
                     <backend_model>Magento\Developer\Model\Config\Backend\AllowedIps</backend_model>
                 </field>
                 <field id="page" translate="label" sortOrder="30" type="select" showInDefault="1" showInStore="1" showInWebsite="1">
-					<label>Page</label>
-					<source_model>Xigen\MaintenancePage\Model\Config\Source\Page</source_model>
-				</field>
+                    <label>Page</label>
+                    <source_model>Xigen\MaintenancePage\Model\Config\Source\Page</source_model>
+                </field>
             </group>
         </section>
     </system>
