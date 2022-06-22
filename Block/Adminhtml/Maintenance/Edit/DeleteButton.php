@@ -5,7 +5,7 @@ namespace Xigen\MaintenancePage\Block\Adminhtml\Maintenance\Edit;
 use Magento\Framework\View\Element\UiComponent\Control\ButtonProviderInterface;
 
 /**
- * Class DeleteButton
+ * Class DeleteButton for MaintenancePage Block Adminhtml Maintenance Edit
  */
 class DeleteButton extends GenericButton implements ButtonProviderInterface
 {

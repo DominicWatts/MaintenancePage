@@ -11,7 +11,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Xigen\MaintenancePage\Helper\Page;
 
 /**
- * Maintenance class
+ * Maintenance class for MaintenancePage Console Command
  */
 class Maintenance extends Command
 {
@@ -105,7 +105,9 @@ class Maintenance extends Command
 
         if ($toggle) {
             if ($toggle == 'enable') {
-                $this->output->writeln((string) (__("Enabling maintenance page %1", $storeId > 0 ? "for store ID " . $storeId : null)));
+                $this->output->writeln(
+                    (string) (__("Enabling maintenance page %1", $storeId > 0 ? "for store ID " . $storeId : null))
+                );
                 $this->resourceConfig->saveConfig(
                     Page::XML_PATH_MAINTENANCE_ENABLED,
                     1,
@@ -117,7 +119,9 @@ class Maintenance extends Command
                 return Cli::RETURN_SUCCESS;
             }
             if ($toggle == 'disable') {
-                $this->output->writeln((string) (__("Disabling maintenance page %1", $storeId > 0 ? "for store ID " . $storeId : null)));
+                $this->output->writeln(
+                    (string) (__("Disabling maintenance page %1", $storeId > 0 ? "for store ID " . $storeId : null))
+                );
                 $this->resourceConfig->saveConfig(
                     Page::XML_PATH_MAINTENANCE_ENABLED,
                     0,

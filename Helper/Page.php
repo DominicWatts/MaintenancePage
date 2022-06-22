@@ -5,7 +5,7 @@ namespace Xigen\MaintenancePage\Helper;
 use Magento\Framework\App\Helper\AbstractHelper;
 
 /**
- * Class Page
+ * Class Page for MaintenancePage Helper
  */
 class Page extends AbstractHelper
 {

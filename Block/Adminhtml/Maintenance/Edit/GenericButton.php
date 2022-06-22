@@ -5,7 +5,7 @@ namespace Xigen\MaintenancePage\Block\Adminhtml\Maintenance\Edit;
 use Magento\Backend\Block\Widget\Context;
 
 /**
- * Class GenericButton
+ * Class GenericButton for MaintenancePage Block Adminhtml Maintenance Edit
  */
 abstract class GenericButton
 {

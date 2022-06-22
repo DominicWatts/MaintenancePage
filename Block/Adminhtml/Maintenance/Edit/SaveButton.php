@@ -5,7 +5,7 @@ namespace Xigen\MaintenancePage\Block\Adminhtml\Maintenance\Edit;
 use Magento\Framework\View\Element\UiComponent\Control\ButtonProviderInterface;
 
 /**
- * Class SaveButton
+ * Class SaveButton for MaintenancePage Block Adminhtml Maintenance Edit
  */
 class SaveButton extends GenericButton implements ButtonProviderInterface
 {

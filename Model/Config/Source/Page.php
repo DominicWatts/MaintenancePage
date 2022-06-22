@@ -3,7 +3,7 @@
 namespace Xigen\MaintenancePage\Model\Config\Source;
 
 /**
- * Class Page
+ * Class Page for MaintenancePage Model Config Source
  */
 class Page implements \Magento\Framework\Option\ArrayInterface
 {

@@ -3,7 +3,7 @@
 namespace Xigen\MaintenancePage\Block\Page;
 
 /**
- * Class Mode
+ * Class Mode for MaintenancePage Block Page
  */
 class Mode extends \Magento\Framework\View\Element\Template
 {
