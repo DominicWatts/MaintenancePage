@@ -50,6 +50,16 @@ class Maintenance extends Command
     protected $eventManager;
 
     /**
+     * @var \Symfony\Component\Console\Input\InputInterface
+     */
+    protected $input;
+
+    /**
+     * @var \Symfony\Component\Console\Output\OutputInterface
+     */
+    protected $output;
+
+    /**
      * Maintenance constructor.
      * @param \Psr\Log\LoggerInterface $logger
      * @param \Magento\Framework\App\State $state
