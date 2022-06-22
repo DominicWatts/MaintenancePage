@@ -14,6 +14,7 @@
         <remove src="mage/polyfill.js"/>
     </head>
     <body>
+        <referenceBlock name="cookie-status-check" remove="true"/>
         <referenceContainer name="page.wrapper" remove="true"/>
         <referenceBlock name="translate" remove="true"/>
         <referenceBlock name="requirejs-config" remove="true"/>
