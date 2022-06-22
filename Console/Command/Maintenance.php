@@ -1,13 +1,12 @@
 <?php
 
-
 namespace Xigen\MaintenancePage\Console\Command;
 
 use Magento\Framework\Console\Cli;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
-use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Xigen\MaintenancePage\Helper\Page;
 
@@ -38,7 +37,7 @@ class Maintenance extends Command
      * @var \Magento\Config\Model\ResourceModel\Config
      */
     protected $resourceConfig;
-    
+
     /**
      * @var \Magento\Framework\Event\ManagerInterface
      */
@@ -82,7 +81,7 @@ class Maintenance extends Command
         $this->eventManager = $eventManager;
         parent::__construct();
     }
-    
+
     /**
      * {@inheritdoc}
      * xigen:maintenancepage:toggle [-s|--store STORE] [--] <toggle>

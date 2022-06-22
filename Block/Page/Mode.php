@@ -1,11 +1,9 @@
 <?php
 
-
 namespace Xigen\MaintenancePage\Block\Page;
 
 /**
  * Class Mode
- * @package Xigen\MaintenancePage\Block\Page
  */
 class Mode extends \Magento\Framework\View\Element\Template
 {

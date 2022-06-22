@@ -1,11 +1,9 @@
 <?php
 
-
 namespace Xigen\MaintenancePage\Controller\Adminhtml\Maintenance;
 
 /**
  * Class Delete
- * @package Xigen\MaintenancePage\Controller\Adminhtml\Maintenance
  */
 class Delete extends \Xigen\MaintenancePage\Controller\Adminhtml\Maintenance
 {

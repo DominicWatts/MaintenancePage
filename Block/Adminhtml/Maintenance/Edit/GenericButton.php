@@ -1,13 +1,11 @@
 <?php
 
-
 namespace Xigen\MaintenancePage\Block\Adminhtml\Maintenance\Edit;
 
 use Magento\Backend\Block\Widget\Context;
 
 /**
  * Class GenericButton
- * @package Xigen\MaintenancePage\Block\Adminhtml\Maintenance\Edit
  */
 abstract class GenericButton
 {

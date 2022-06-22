@@ -1,11 +1,9 @@
 <?php
 
-
 namespace Xigen\MaintenancePage\Plugin\Frontend\Magento\Framework\View\Result;
 
 /**
  * Class Page
- * @package Xigen\MaintenancePage\Plugin\Frontend\Magento\Framework\View\Result
  */
 class Page
 {

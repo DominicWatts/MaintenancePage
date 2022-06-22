@@ -1,13 +1,11 @@
 <?php
 
-
 namespace Xigen\MaintenancePage\Helper;
 
 use Magento\Framework\App\Helper\AbstractHelper;
 
 /**
  * Class Page
- * @package Xigen\MaintenancePage\Helper
  */
 class Page extends AbstractHelper
 {

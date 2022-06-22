@@ -1,13 +1,9 @@
 <?php
 
-
 namespace Xigen\MaintenancePage\Api;
-
-use Magento\Framework\Api\SearchCriteriaInterface;
 
 /**
  * Interface MaintenanceRepositoryInterface
- * @package Xigen\MaintenancePage\Api
  */
 interface MaintenanceRepositoryInterface
 {

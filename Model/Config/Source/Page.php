@@ -1,11 +1,9 @@
 <?php
 
-
 namespace Xigen\MaintenancePage\Model\Config\Source;
 
 /**
  * Class Page
- * @package Xigen\MaintenancePage\Model\Config\Source
  */
 class Page implements \Magento\Framework\Option\ArrayInterface
 {

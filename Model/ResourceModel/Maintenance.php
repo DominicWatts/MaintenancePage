@@ -1,11 +1,9 @@
 <?php
 
-
 namespace Xigen\MaintenancePage\Model\ResourceModel;
 
 /**
  * Class Maintenance
- * @package Xigen\MaintenancePage\Model\ResourceModel
  */
 class Maintenance extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
 {

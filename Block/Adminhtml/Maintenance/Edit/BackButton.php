@@ -1,13 +1,11 @@
 <?php
 
-
 namespace Xigen\MaintenancePage\Block\Adminhtml\Maintenance\Edit;
 
 use Magento\Framework\View\Element\UiComponent\Control\ButtonProviderInterface;
 
 /**
  * Class BackButton
- * @package Xigen\MaintenancePage\Block\Adminhtml\Maintenance\Edit
  */
 class BackButton extends GenericButton implements ButtonProviderInterface
 {

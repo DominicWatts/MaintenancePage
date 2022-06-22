@@ -1,11 +1,9 @@
 <?php
 
-
 namespace Xigen\MaintenancePage\Controller\Adminhtml;
 
 /**
  * Class Maintenance
- * @package Xigen\MaintenancePage\Controller\Adminhtml
  */
 abstract class Maintenance extends \Magento\Backend\App\Action
 {

@@ -1,11 +1,9 @@
 <?php
 
-
 namespace Xigen\MaintenancePage\Controller\Adminhtml\Maintenance;
 
 /**
  * Class InlineEdit
- * @package Xigen\MaintenancePage\Controller\Adminhtml\Maintenance
  */
 class InlineEdit extends \Magento\Backend\App\Action
 {
@@ -46,7 +44,7 @@ class InlineEdit extends \Magento\Backend\App\Action
         $resultJson = $this->jsonFactory->create();
         $error = false;
         $messages = [];
-        
+
         if ($this->getRequest()->getParam('isAjax')) {
             $postItems = $this->getRequest()->getParam('items', []);
             if (!count($postItems)) {
@@ -66,7 +64,7 @@ class InlineEdit extends \Magento\Backend\App\Action
                 }
             }
         }
-        
+
         return $resultJson->setData([
             'messages' => $messages,
             'error' => $error

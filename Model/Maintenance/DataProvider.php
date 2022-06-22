@@ -1,14 +1,12 @@
 <?php
 
-
 namespace Xigen\MaintenancePage\Model\Maintenance;
 
-use Xigen\MaintenancePage\Model\ResourceModel\Maintenance\CollectionFactory;
 use Magento\Framework\App\Request\DataPersistorInterface;
+use Xigen\MaintenancePage\Model\ResourceModel\Maintenance\CollectionFactory;
 
 /**
  * Class DataProvider
- * @package Xigen\MaintenancePage\Model\Maintenance
  */
 class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
 {
@@ -66,14 +64,14 @@ class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
             $this->loadedData[$model->getId()] = $model->getData();
         }
         $data = $this->dataPersistor->get('xigen_maintenancepage_maintenance');
-        
+
         if (!empty($data)) {
             $model = $this->collection->getNewEmptyItem();
             $model->setData($data);
             $this->loadedData[$model->getId()] = $model->getData();
             $this->dataPersistor->clear('xigen_maintenancepage_maintenance');
         }
-        
+
         return $this->loadedData;
     }
 }
