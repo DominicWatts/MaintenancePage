@@ -3,7 +3,7 @@
 namespace Xigen\MaintenancePage\Controller\Adminhtml\Maintenance;
 
 /**
- * Class Edit
+ * Class Edit Maintenance Page controller
  */
 class Edit extends \Xigen\MaintenancePage\Controller\Adminhtml\Maintenance
 {

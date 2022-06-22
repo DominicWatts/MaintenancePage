@@ -3,7 +3,7 @@
 namespace Xigen\MaintenancePage\Controller\Adminhtml\Maintenance;
 
 /**
- * Class InlineEdit
+ * Class InlineEdit Maintenance Page controller for grid
  */
 class InlineEdit extends \Magento\Backend\App\Action
 {

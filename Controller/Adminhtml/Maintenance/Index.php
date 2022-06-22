@@ -3,7 +3,7 @@
 namespace Xigen\MaintenancePage\Controller\Adminhtml\Maintenance;
 
 /**
- * Class Index
+ * Class Index Maintenance Page controller
  */
 class Index extends \Magento\Backend\App\Action
 {

@@ -3,7 +3,7 @@
 namespace Xigen\MaintenancePage\Controller\Adminhtml\Maintenance;
 
 /**
- * Class Delete
+ * Class Delete Maintenance Page controller
  */
 class Delete extends \Xigen\MaintenancePage\Controller\Adminhtml\Maintenance
 {

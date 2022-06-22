@@ -3,7 +3,7 @@
 namespace Xigen\MaintenancePage\Controller\Adminhtml\Maintenance;
 
 /**
- * Class NewAction
+ * Class NewAction Maintenance Page controller
  */
 class NewAction extends \Xigen\MaintenancePage\Controller\Adminhtml\Maintenance
 {

@@ -5,7 +5,7 @@ namespace Xigen\MaintenancePage\Controller\Adminhtml\Maintenance;
 use Magento\Framework\Exception\LocalizedException;
 
 /**
- * Save class
+ * Save class Maintenance Page controller
  */
 class Save extends \Magento\Backend\App\Action
 {

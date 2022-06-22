@@ -89,6 +89,7 @@ class Maintenance extends Command
      * php bin/magento xigen:maintenancepage:toggle disable
      * php bin/magento xigen:maintenancepage:toggle enable -s 1
      * php bin/magento xigen:maintenancepage:toggle disable -s 1
+     * @return int
      */
     protected function execute(
         InputInterface $input,
@@ -127,8 +128,8 @@ class Maintenance extends Command
                 $this->cacheManager->clean($cacheTypes);
                 return Cli::RETURN_SUCCESS;
             }
-            return Cli::RETURN_FAILURE;
         }
+        return Cli::RETURN_FAILURE;
     }
 
     /**
