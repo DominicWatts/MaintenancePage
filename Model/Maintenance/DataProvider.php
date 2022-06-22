@@ -6,7 +6,7 @@ use Magento\Framework\App\Request\DataPersistorInterface;
 use Xigen\MaintenancePage\Model\ResourceModel\Maintenance\CollectionFactory;
 
 /**
- * Class DataProvider
+ * Class DataProvider for MaintenancePage DataProvider
  */
 class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
 {

@@ -3,7 +3,7 @@
 namespace Xigen\MaintenancePage\Ui\Component\Listing\Column;
 
 /**
- * Class MaintenanceActions
+ * Class MaintenanceActions for MaintenancePage Ui Component Listing Column
  */
 class MaintenanceActions extends \Magento\Ui\Component\Listing\Columns\Column
 {

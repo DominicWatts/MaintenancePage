@@ -7,7 +7,7 @@ use Xigen\MaintenancePage\Api\Data\MaintenanceInterface;
 use Xigen\MaintenancePage\Api\Data\MaintenanceInterfaceFactory;
 
 /**
- * Class Maintenance
+ * Class Maintenance for MaintenancePage Model
  */
 class Maintenance extends \Magento\Framework\Model\AbstractModel
 {

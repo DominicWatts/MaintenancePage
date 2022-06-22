@@ -5,7 +5,7 @@ namespace Xigen\MaintenancePage\Model\Data;
 use Xigen\MaintenancePage\Api\Data\MaintenanceInterface;
 
 /**
- * Class Maintenance
+ * Class Maintenance for MaintenancePage MaintenanceInterface
  */
 class Maintenance extends \Magento\Framework\Api\AbstractExtensibleObject implements MaintenanceInterface
 {

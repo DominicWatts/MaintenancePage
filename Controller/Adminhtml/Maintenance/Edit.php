@@ -66,7 +66,9 @@ class Edit extends \Xigen\MaintenancePage\Controller\Adminhtml\Maintenance
             $id ? __('Edit Maintenance Page') : __('New Maintenance Page')
         );
         $resultPage->getConfig()->getTitle()->prepend(__('Maintenance Pages'));
-        $resultPage->getConfig()->getTitle()->prepend($model->getId() ? __('Edit Maintenance Page %1', $model->getId()) : __('New Maintenance Page'));
+        $resultPage->getConfig()->getTitle()->prepend(
+            $model->getId() ? __('Edit Maintenance Page %1', $model->getId()) : __('New Maintenance Page')
+        );
         return $resultPage;
     }
 }

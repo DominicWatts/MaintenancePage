@@ -18,7 +18,7 @@ use Xigen\MaintenancePage\Model\ResourceModel\Maintenance as ResourceMaintenance
 use Xigen\MaintenancePage\Model\ResourceModel\Maintenance\CollectionFactory as MaintenanceCollectionFactory;
 
 /**
- * Class MaintenanceRepository
+ * Class MaintenanceRepository for MaintenancePage Model MaintenanceRepositoryInterface
  */
 class MaintenanceRepository implements MaintenanceRepositoryInterface
 {

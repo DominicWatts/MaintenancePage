@@ -3,7 +3,7 @@
 namespace Xigen\MaintenancePage\Model\ResourceModel;
 
 /**
- * Class Maintenance
+ * Class Maintenance for MaintenancePage Model ResourceModel
  */
 class Maintenance extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
 {

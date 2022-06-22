@@ -3,7 +3,7 @@
 namespace Xigen\MaintenancePage\Plugin\Frontend\Magento\Framework\View\Result;
 
 /**
- * Class Page
+ * Class Layout for MaintenancePage Plugin
  */
 class Layout
 {
