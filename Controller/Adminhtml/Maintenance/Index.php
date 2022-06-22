@@ -1,11 +1,9 @@
 <?php
 
-
 namespace Xigen\MaintenancePage\Controller\Adminhtml\Maintenance;
 
 /**
- * Class Index
- * @package Xigen\MaintenancePage\Controller\Adminhtml\Maintenance
+ * Class Index Maintenance Page controller
  */
 class Index extends \Magento\Backend\App\Action
 {

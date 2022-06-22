@@ -1,12 +1,11 @@
 <?php
 
-
 namespace Xigen\MaintenancePage\Controller\Adminhtml\Maintenance;
 
 use Magento\Framework\Exception\LocalizedException;
 
 /**
- * Save class
+ * Save class Maintenance Page controller
  */
 class Save extends \Magento\Backend\App\Action
 {
@@ -48,20 +47,20 @@ class Save extends \Magento\Backend\App\Action
         $data = $this->getRequest()->getPostValue();
         if ($data) {
             $id = $this->getRequest()->getParam('maintenance_id');
-        
+
             $model = $this->maintenanceFactory->create()->load($id);
             if (!$model->getId() && $id) {
                 $this->messageManager->addErrorMessage(__('This Maintenance page no longer exists.'));
                 return $resultRedirect->setPath('*/*/');
             }
-        
+
             $model->setData($data);
-        
+
             try {
                 $model->save();
                 $this->messageManager->addSuccessMessage(__('You saved the Maintenance page.'));
                 $this->dataPersistor->clear('xigen_maintenancepage_maintenance');
-        
+
                 if ($this->getRequest()->getParam('back')) {
                     return $resultRedirect->setPath('*/*/edit', ['maintenance_id' => $model->getId()]);
                 }
@@ -69,9 +68,12 @@ class Save extends \Magento\Backend\App\Action
             } catch (LocalizedException $e) {
                 $this->messageManager->addErrorMessage($e->getMessage());
             } catch (\Exception $e) {
-                $this->messageManager->addExceptionMessage($e, __('Something went wrong while saving the Maintenance.'));
+                $this->messageManager->addExceptionMessage(
+                    $e,
+                    __('Something went wrong while saving the Maintenance.')
+                );
             }
-        
+
             $this->dataPersistor->set('xigen_maintenancepage_maintenance', $data);
             return $resultRedirect->setPath('*/*/edit', ['maintenance_id' => $id]);
         }

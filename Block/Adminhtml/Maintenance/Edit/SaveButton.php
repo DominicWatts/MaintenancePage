@@ -1,13 +1,11 @@
 <?php
 
-
 namespace Xigen\MaintenancePage\Block\Adminhtml\Maintenance\Edit;
 
 use Magento\Framework\View\Element\UiComponent\Control\ButtonProviderInterface;
 
 /**
- * Class SaveButton
- * @package Xigen\MaintenancePage\Block\Adminhtml\Maintenance\Edit
+ * Class SaveButton for MaintenancePage Block Adminhtml Maintenance Edit
  */
 class SaveButton extends GenericButton implements ButtonProviderInterface
 {

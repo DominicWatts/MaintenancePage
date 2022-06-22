@@ -1,11 +1,9 @@
 <?php
 
-
 namespace Xigen\MaintenancePage\Api\Data;
 
 /**
  * Interface MaintenanceSearchResultsInterface
- * @package Xigen\MaintenancePage\Api\Data
  */
 interface MaintenanceSearchResultsInterface extends \Magento\Framework\Api\SearchResultsInterface
 {

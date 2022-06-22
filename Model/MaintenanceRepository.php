@@ -1,26 +1,24 @@
 <?php
 
-
 namespace Xigen\MaintenancePage\Model;
 
+use Magento\Framework\Api\DataObjectHelper;
 use Magento\Framework\Api\ExtensibleDataObjectConverter;
+use Magento\Framework\Api\ExtensionAttribute\JoinProcessorInterface;
 use Magento\Framework\Api\SearchCriteria\CollectionProcessorInterface;
 use Magento\Framework\Exception\CouldNotDeleteException;
 use Magento\Framework\Exception\CouldNotSaveException;
-use Magento\Store\Model\StoreManagerInterface;
-use Magento\Framework\Api\ExtensionAttribute\JoinProcessorInterface;
-use Xigen\MaintenancePage\Model\ResourceModel\Maintenance as ResourceMaintenance;
-use Xigen\MaintenancePage\Api\Data\MaintenanceSearchResultsInterfaceFactory;
-use Magento\Framework\Api\DataObjectHelper;
-use Xigen\MaintenancePage\Api\MaintenanceRepositoryInterface;
-use Xigen\MaintenancePage\Api\Data\MaintenanceInterfaceFactory;
-use Magento\Framework\Reflection\DataObjectProcessor;
 use Magento\Framework\Exception\NoSuchEntityException;
+use Magento\Framework\Reflection\DataObjectProcessor;
+use Magento\Store\Model\StoreManagerInterface;
+use Xigen\MaintenancePage\Api\Data\MaintenanceInterfaceFactory;
+use Xigen\MaintenancePage\Api\Data\MaintenanceSearchResultsInterfaceFactory;
+use Xigen\MaintenancePage\Api\MaintenanceRepositoryInterface;
+use Xigen\MaintenancePage\Model\ResourceModel\Maintenance as ResourceMaintenance;
 use Xigen\MaintenancePage\Model\ResourceModel\Maintenance\CollectionFactory as MaintenanceCollectionFactory;
 
 /**
- * Class MaintenanceRepository
- * @package Xigen\MaintenancePage\Model
+ * Class MaintenanceRepository for MaintenancePage Model MaintenanceRepositoryInterface
  */
 class MaintenanceRepository implements MaintenanceRepositoryInterface
 {
@@ -128,15 +126,15 @@ class MaintenanceRepository implements MaintenanceRepositoryInterface
             $storeId = $this->storeManager->getStore()->getId();
             $maintenance->setStoreId($storeId);
         } */
-        
+
         $maintenanceData = $this->extensibleDataObjectConverter->toNestedArray(
             $maintenance,
             [],
             \Xigen\MaintenancePage\Api\Data\MaintenanceInterface::class
         );
-        
+
         $maintenanceModel = $this->maintenanceFactory->create()->setData($maintenanceData);
-        
+
         try {
             $this->resource->save($maintenanceModel);
         } catch (\Exception $exception) {
@@ -168,22 +166,22 @@ class MaintenanceRepository implements MaintenanceRepositoryInterface
         \Magento\Framework\Api\SearchCriteriaInterface $criteria
     ) {
         $collection = $this->maintenanceCollectionFactory->create();
-        
+
         $this->extensionAttributesJoinProcessor->process(
             $collection,
             \Xigen\MaintenancePage\Api\Data\MaintenanceInterface::class
         );
-        
+
         $this->collectionProcessor->process($criteria, $collection);
-        
+
         $searchResults = $this->searchResultsFactory->create();
         $searchResults->setSearchCriteria($criteria);
-        
+
         $items = [];
         foreach ($collection as $model) {
             $items[] = $model->getDataModel();
         }
-        
+
         $searchResults->setItems($items);
         $searchResults->setTotalCount($collection->getSize());
         return $searchResults;

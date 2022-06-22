@@ -1,11 +1,9 @@
 <?php
 
-
 namespace Xigen\MaintenancePage\Controller\Adminhtml\Maintenance;
 
 /**
- * Class NewAction
- * @package Xigen\MaintenancePage\Controller\Adminhtml\Maintenance
+ * Class NewAction Maintenance Page controller
  */
 class NewAction extends \Xigen\MaintenancePage\Controller\Adminhtml\Maintenance
 {

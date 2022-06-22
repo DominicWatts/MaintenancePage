@@ -1,11 +1,9 @@
 <?php
 
-
 namespace Xigen\MaintenancePage\Model\ResourceModel\Maintenance;
 
 /**
- * Class Collection
- * @package Xigen\MaintenancePage\Model\ResourceModel\Maintenance
+ * Class Collection for MaintenancePage Maintenance ResourceModel
  */
 class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection
 {

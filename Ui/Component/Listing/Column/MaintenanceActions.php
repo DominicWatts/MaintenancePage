@@ -1,11 +1,9 @@
 <?php
 
-
 namespace Xigen\MaintenancePage\Ui\Component\Listing\Column;
 
 /**
- * Class MaintenanceActions
- * @package Xigen\MaintenancePage\Ui\Component\Listing\Column
+ * Class MaintenanceActions for MaintenancePage Ui Component Listing Column
  */
 class MaintenanceActions extends \Magento\Ui\Component\Listing\Columns\Column
 {
@@ -75,7 +73,7 @@ class MaintenanceActions extends \Magento\Ui\Component\Listing\Columns\Column
                 }
             }
         }
-        
+
         return $dataSource;
     }
 }

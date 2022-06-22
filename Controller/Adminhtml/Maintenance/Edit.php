@@ -1,11 +1,9 @@
 <?php
 
-
 namespace Xigen\MaintenancePage\Controller\Adminhtml\Maintenance;
 
 /**
- * Class Edit
- * @package Xigen\MaintenancePage\Controller\Adminhtml\Maintenance
+ * Class Edit Maintenance Page controller
  */
 class Edit extends \Xigen\MaintenancePage\Controller\Adminhtml\Maintenance
 {
@@ -47,7 +45,7 @@ class Edit extends \Xigen\MaintenancePage\Controller\Adminhtml\Maintenance
         // 1. Get ID and create model
         $id = $this->getRequest()->getParam('maintenance_id');
         $model = $this->maintenanceFactory->create();
-        
+
         // 2. Initial checking
         if ($id) {
             $model->load($id);
@@ -59,7 +57,7 @@ class Edit extends \Xigen\MaintenancePage\Controller\Adminhtml\Maintenance
             }
         }
         $this->_coreRegistry->register('xigen_maintenancepage_maintenance', $model);
-        
+
         // 3. Build edit form
         /** @var \Magento\Backend\Model\View\Result\Page $resultPage */
         $resultPage = $this->resultPageFactory->create();
@@ -68,7 +66,9 @@ class Edit extends \Xigen\MaintenancePage\Controller\Adminhtml\Maintenance
             $id ? __('Edit Maintenance Page') : __('New Maintenance Page')
         );
         $resultPage->getConfig()->getTitle()->prepend(__('Maintenance Pages'));
-        $resultPage->getConfig()->getTitle()->prepend($model->getId() ? __('Edit Maintenance Page %1', $model->getId()) : __('New Maintenance Page'));
+        $resultPage->getConfig()->getTitle()->prepend(
+            $model->getId() ? __('Edit Maintenance Page %1', $model->getId()) : __('New Maintenance Page')
+        );
         return $resultPage;
     }
 }

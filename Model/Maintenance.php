@@ -1,15 +1,13 @@
 <?php
 
-
 namespace Xigen\MaintenancePage\Model;
 
-use Xigen\MaintenancePage\Api\Data\MaintenanceInterfaceFactory;
-use Xigen\MaintenancePage\Api\Data\MaintenanceInterface;
 use Magento\Framework\Api\DataObjectHelper;
+use Xigen\MaintenancePage\Api\Data\MaintenanceInterface;
+use Xigen\MaintenancePage\Api\Data\MaintenanceInterfaceFactory;
 
 /**
- * Class Maintenance
- * @package Xigen\MaintenancePage\Model
+ * Class Maintenance for MaintenancePage Model
  */
 class Maintenance extends \Magento\Framework\Model\AbstractModel
 {
@@ -79,14 +77,14 @@ class Maintenance extends \Magento\Framework\Model\AbstractModel
     public function getDataModel()
     {
         $maintenanceData = $this->getData();
-        
+
         $maintenanceDataObject = $this->maintenanceDataFactory->create();
         $this->dataObjectHelper->populateWithArray(
             $maintenanceDataObject,
             $maintenanceData,
             MaintenanceInterface::class
         );
-        
+
         return $maintenanceDataObject;
     }
 }

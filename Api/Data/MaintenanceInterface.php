@@ -1,11 +1,9 @@
 <?php
 
-
 namespace Xigen\MaintenancePage\Api\Data;
 
 /**
  * Interface MaintenanceInterface
- * @package Xigen\MaintenancePage\Api\Data
  */
 interface MaintenanceInterface extends \Magento\Framework\Api\ExtensibleDataInterface
 {

@@ -1,18 +1,17 @@
 <?php
 
-
 namespace Xigen\MaintenancePage\Console\Command;
 
 use Magento\Framework\Console\Cli;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
-use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Xigen\MaintenancePage\Helper\Page;
 
 /**
- * Maintenance class
+ * Maintenance class for MaintenancePage Console Command
  */
 class Maintenance extends Command
 {
@@ -38,7 +37,7 @@ class Maintenance extends Command
      * @var \Magento\Config\Model\ResourceModel\Config
      */
     protected $resourceConfig;
-    
+
     /**
      * @var \Magento\Framework\Event\ManagerInterface
      */
@@ -48,6 +47,16 @@ class Maintenance extends Command
      * @var \Magento\Framework\Event\ManagerInterface
      */
     protected $eventManager;
+
+    /**
+     * @var \Symfony\Component\Console\Input\InputInterface
+     */
+    protected $input;
+
+    /**
+     * @var \Symfony\Component\Console\Output\OutputInterface
+     */
+    protected $output;
 
     /**
      * Maintenance constructor.
@@ -72,7 +81,7 @@ class Maintenance extends Command
         $this->eventManager = $eventManager;
         parent::__construct();
     }
-    
+
     /**
      * {@inheritdoc}
      * xigen:maintenancepage:toggle [-s|--store STORE] [--] <toggle>
@@ -80,6 +89,7 @@ class Maintenance extends Command
      * php bin/magento xigen:maintenancepage:toggle disable
      * php bin/magento xigen:maintenancepage:toggle enable -s 1
      * php bin/magento xigen:maintenancepage:toggle disable -s 1
+     * @return int
      */
     protected function execute(
         InputInterface $input,
@@ -95,7 +105,9 @@ class Maintenance extends Command
 
         if ($toggle) {
             if ($toggle == 'enable') {
-                $this->output->writeln((string) (__("Enabling maintenance page %1", $storeId > 0 ? "for store ID " . $storeId : null)));
+                $this->output->writeln(
+                    (string) (__("Enabling maintenance page %1", $storeId > 0 ? "for store ID " . $storeId : null))
+                );
                 $this->resourceConfig->saveConfig(
                     Page::XML_PATH_MAINTENANCE_ENABLED,
                     1,
@@ -107,7 +119,9 @@ class Maintenance extends Command
                 return Cli::RETURN_SUCCESS;
             }
             if ($toggle == 'disable') {
-                $this->output->writeln((string) (__("Disabling maintenance page %1", $storeId > 0 ? "for store ID " . $storeId : null)));
+                $this->output->writeln(
+                    (string) (__("Disabling maintenance page %1", $storeId > 0 ? "for store ID " . $storeId : null))
+                );
                 $this->resourceConfig->saveConfig(
                     Page::XML_PATH_MAINTENANCE_ENABLED,
                     0,
@@ -118,8 +132,8 @@ class Maintenance extends Command
                 $this->cacheManager->clean($cacheTypes);
                 return Cli::RETURN_SUCCESS;
             }
-            return Cli::RETURN_FAILURE;
         }
+        return Cli::RETURN_FAILURE;
     }
 
     /**
