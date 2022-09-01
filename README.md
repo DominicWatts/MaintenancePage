@@ -1,6 +1,6 @@
-# Simple Maintenance Page
+# Simple Maintenance Page or coming soon
 
-Extension to add and configure whole site maintenance style pages
+Extension to add and configure maintenance or coming soon style landing page for store front. Can be set on globally or per a multi-site store basis.
 
 # Install instructions
 
@@ -23,7 +23,7 @@ Configure maintanance page to show or hide with these configurations
 ![Screenshot](https://i.snipboard.io/GaKlXn.jpg)
 
 ```
-Warning: Will add load to site as plugin will intercept every page request - I've made this as lightweight as possible but this is designed for development, coming soon page or as emergency measure
+Warning: this is designed more for store based generic landing pages such as coming soon page or as emergency measure to block traffic to particular store. Magento maintenance mode will override.
 ```
 
 # Console command to toggle maintenance page
