@@ -1,0 +1,10 @@
+name: Extdn PHP Compat
+on: [push, pull_request]
+
+jobs:
+  static:
+    name: Extdn PHP Compat
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: extdn/github-actions-m2/php-compatibility/8.1@master
